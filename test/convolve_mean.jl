@@ -12,8 +12,8 @@ function symmetric(arr)
 end
 
 function fixed_conv(arr)
-  f = fft(arr)
-  hold = real(ifft(f .* conj(f))) ./ length(arr)
+  f = fft(arr); len = length(arr)
+  hold = real(ifft(f .* conj(f))) ./ len
   # shift the indices to center on element `1`
   return vcat(hold[2:div(len+1, 2)], hold[1], hold[div(len+3, 2):end])
 end
