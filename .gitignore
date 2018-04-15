@@ -1,2 +1,7 @@
 # ignore data files
 data/*
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
