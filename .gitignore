@@ -1,5 +1,4 @@
-# ignore all data for testing
-data/*
+#ignore all data for testing
 res-paper/*
 
 # ignore IJulia
