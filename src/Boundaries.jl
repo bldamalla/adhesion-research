@@ -23,7 +23,7 @@ end
 This function computes the ensemble averaged two point statistics of the microstructure image.
 """
 function ensemble_ave(ens::Vector{Vector{T}}) where T <: AbstractFloat
-  return mean(map(-, ens, map(ens, threshold)))
+  return mean(ceil.(map(-, ens, map(threshold, ens)./256)))
 end
 
 end
